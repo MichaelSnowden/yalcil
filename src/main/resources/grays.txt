@@ -1,0 +1,1 @@
+(\ n (join (map (\ x (zpad (bin (gray x)) n)) (range 0 (<< 1 n))) "\n"))

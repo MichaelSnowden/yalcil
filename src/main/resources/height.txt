@@ -1,0 +1,4 @@
+(\height t
+(if (nil? t)
+    0
+(+ 1 (max (height (left t)) (height (right t))))))

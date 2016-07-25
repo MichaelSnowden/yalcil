@@ -1,0 +1,4 @@
+(\ico x
+(if (list? x)
+    (cons "cons" (map ico x))
+x))

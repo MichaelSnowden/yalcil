@@ -1,0 +1,4 @@
+(\ t ((\vprint t n
+(if (nil? t)
+    ""
+(+ (* " " n) (str (data t)) "\n" (vprint (left t) (+ n 4)) (vprint (right t) (+ n 4)) ""))) t 0))

@@ -1,0 +1,27 @@
+.parentheses-0 {
+    color: #000;
+}
+
+.parentheses-1 {
+    color: #400;
+}
+
+.parentheses-2 {
+    color: #800;
+}
+
+.parentheses-3 {
+    color: #F00;
+}
+
+.number {
+    color: #227ddb;
+}
+
+.identifier {
+    color: #6b05a4;
+}
+
+.string {
+    color: #008f38;
+}

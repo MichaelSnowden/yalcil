@@ -1,0 +1,4 @@
+(\reverse x
+(if (nil? x)
+	nil
+(append (reverse (cdr x)) (list (car x)))))

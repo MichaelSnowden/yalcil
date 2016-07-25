@@ -1,0 +1,4 @@
+(\grow t n
+(if (= n 0)
+    t
+((\ X (grow (tree (+ X 1) t (tmap (\ x (+ X x 1)) t)) (- n 1))) (tmax t))))

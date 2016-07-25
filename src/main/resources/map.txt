@@ -1,0 +1,6 @@
+(\map f x
+(if (nil? x)
+    nil
+(if (= (len x) 1)
+    (cons (f (car x)) nil)
+(cons (f (car x)) (map f (cdr x))))))

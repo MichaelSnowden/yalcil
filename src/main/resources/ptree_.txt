@@ -1,0 +1,12 @@
+(\ptree_ q h w
+(if (nil? q)
+    ""
+((\ t y l r
+(+ (* (delta h y l) w " ")
+(if (nil? t)
+    (+ (center "" w) r (ptree_
+    (if (< y (- h 1))
+        (append (cdr q) (list (list nil (+ y 1) l "") (list nil (+ y 1) 0 r)))
+    (cdr q)) h w))
+(+ (center (str (data t)) w) r (ptree_ (append (cdr q) (list (list (left t) (+ y 1) l "") (list (right t) (+ y 1) 0 r))) h w)))))
+(car (car q)) (cadr (car q)) (caddr (car q)) (cadddr (car q)))))

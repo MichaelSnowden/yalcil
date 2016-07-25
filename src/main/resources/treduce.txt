@@ -1,0 +1,8 @@
+(\treduce f t
+(if (and (nil? (left t)) (nil? (right t)))
+    (data t)
+(if (nil? (left t))
+    (f (data t) (treduce f (right t)))
+(if (nil? (right t))
+    (f (treduce (left t)) (f (data t)))
+(f (treduce f (left t)) (f (data t) (treduce f (right t))))))))

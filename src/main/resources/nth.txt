@@ -1,0 +1,4 @@
+(\nth x n
+(if (= n 0)
+    (car x)
+(nth (cdr x) (- n 1))))

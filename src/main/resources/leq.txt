@@ -1,0 +1,10 @@
+(\leq a b
+(if (and (nil? a) (nil? b))
+	1
+(if (nil? a)
+	0
+(if (nil? b)
+	0
+(if (!= (car a) (car b))
+	0
+(leq (cdr a) (cdr b)))))))

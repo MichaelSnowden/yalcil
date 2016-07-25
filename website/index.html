@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="require.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="yalcil.js"></script>
+    <script>
+        $(function () {
+            var antlr4 = require("./antlr4/index");
+            var YalcilLexer = require('./grammar/YalcilLexer');
+            var YalcilParser = require('./grammar/YalcilParser');
+
+            function evaluate(input) {
+                var chars = new antlr4.InputStream(input);
+                var lexer = new YalcilLexer.YalcilLexer(chars);
+                var tokens = new antlr4.CommonTokenStream(lexer);
+                var parser = new YalcilParser.YalcilParser(tokens);
+                parser.buildParseTrees = true;
+                var program = parser.program();
+                return Runtime.runProgram(program);
+            }
+
+            function evaluateAndOutput(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var text = $("#input").val();
+                console.log(text);
+                var result = evaluate(text);
+                console.log(result);
+                $("#output").text(result);
+            }
+
+            $("form").submit(evaluateAndOutput);
+        });
+    </script>
+</head>
+<body>
+<form>
+    <div id="highlighted"></div>
+    <label for="input">
+        <textarea id="input"></textarea>
+    </label>
+    <button>Go</button>
+</form>
+<div id="output"></div>
+</body>
+</html>

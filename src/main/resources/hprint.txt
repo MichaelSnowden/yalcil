@@ -1,0 +1,9 @@
+(\hprint t
+((\hprint q
+(if (nil? q)
+    ""
+(if (nil? (caar q))
+    ""
+(+ (str (data (caar q))) " " (cadar q)
+(hprint (append (cdr q) (list (list (left (caar q)) "")) (list (list (right (caar q)) (cadar q)))))))))
+(list (list t "\n"))))

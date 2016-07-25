@@ -1,0 +1,7 @@
+(\factor x
+((\factor_ x d
+(if (= d 1)
+    (leaf x)
+(if (divides d x)
+    (tree x (factor d) (factor (/ x d)))
+(factor_ x (- d 1))))) x (isqrt x)))

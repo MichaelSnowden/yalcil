@@ -1,0 +1,1 @@
+(\sin t ((\f d b (if (= d -1) 0 (+ (f (- d 2) (* b -1)) (/ (* b (** t d)) (factorial d))))) 17 1))

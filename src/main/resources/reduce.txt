@@ -1,0 +1,1 @@
+(\reduce f x (if (= (len x) 1) (car x) (f (car x) (reduce f (cdr x)))))

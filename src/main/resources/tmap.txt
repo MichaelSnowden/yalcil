@@ -1,0 +1,4 @@
+(\tmap f t
+(if (nil? t)
+    nil
+(tree (f (data t)) (tmap f (left t)) (tmap f (right t)))))

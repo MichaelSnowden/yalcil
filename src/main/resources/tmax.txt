@@ -1,0 +1,4 @@
+(\tmax t
+(if (nil? (right t))
+    (data t)
+(tmax (right t))))

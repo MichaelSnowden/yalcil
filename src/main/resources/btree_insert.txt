@@ -1,0 +1,10 @@
+(\insert t k v
+(if (nil? t)
+    0
+(if (list? t)
+    (if (= (data t) x)
+        1
+    (if (< x (data t))
+        (srch (left t) x)
+    (srch (right t))))
+(= t x))))

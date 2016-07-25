@@ -1,0 +1,1 @@
+(\ t a b (join (map (\ x (+ (str x) ":" (if (bsearch t x) "found" "not found"))) (range a b)) "\n"))

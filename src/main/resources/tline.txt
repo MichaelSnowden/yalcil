@@ -1,0 +1,1 @@
+(\ t (treduce + (tmap str t) ""))
